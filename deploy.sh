@@ -5,7 +5,7 @@ GRANT ALL PRIVILEGES ON webdb.* TO 'web'@'localhost';
 FLUSH PRIVILEGES;
 EOF
 
-mysql -u root webdb < /mnt/additional/web/dump.sql
+mysql -u root webdb < /mnt/add./web/dump.sql
 
 sed -i 's/\$dbname = "db";/\$dbname = "webdb";/g' /var/www/html/index.php
 sed -i 's/\$username = "user";/\$username = "web";/g' /var/www/html/index.php
